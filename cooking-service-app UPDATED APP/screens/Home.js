@@ -16,11 +16,10 @@ const Home = ({ navigation }) => {
     // Dummy Datas
 
     const initialCurrentLocation = {
-        streetName: "DARWIN",
-        gps: {
-            latitude: -12.371345050190813,
-            longitude: 110.36381866919922, 
-        }
+        streetName: "CDU",
+        
+            latitude: -12.372038245119178, 
+            longitude: 130.86889257733912
     }
 
     const categoryData = [
@@ -82,7 +81,7 @@ const Home = ({ navigation }) => {
     const fairPrice = 2
     const expensive = 3
 
-    const restaurantData = [
+    const serviceData = [
         {
             id: 1,
             name: "AJ Cooking Service",
@@ -92,13 +91,13 @@ const Home = ({ navigation }) => {
             photo: images.burger_restaurant_1,
             duration: "30 - 45 min",
             location: {
-                latitude: -12.371345050190813,
-                longitude: 110.36381866919922,
+                latitude: -12.370329136967252, 
+                longitude: 130.97423352469156,
         
             },
             courier: {
                 avatar: images.avatar_1,
-                name: "Amy"
+                name: "Karen"
             },
             menu: [
                 {
@@ -136,12 +135,12 @@ const Home = ({ navigation }) => {
             photo: images.pizza_restaurant,
             duration: "15 - 20 min",
             location: {
-                latitude: -12.371345050190813,
-                longitude: 110.36381866919922,
+                latitude: -12.374216083819165, 
+                longitude: 130.87553017111372,
             },
             courier: {
                 avatar: images.avatar_2,
-                name: "Jackson"
+                name: "Jackson -  American Cuisine Chef`"
             },
             menu: [
                 {
@@ -187,12 +186,12 @@ const Home = ({ navigation }) => {
             photo: images.hot_dog_restaurant,
             duration: "20 - 25 min",
             location: {
-                latitude: -12.371345050190813,
-                longitude: 110.36381866919922,
+                latitude: -12.378190317975685, 
+                longitude: 130.87231091103118,
             },
             courier: {
                 avatar: images.avatar_3,
-                name: "James"
+                name: "James - American Cuisine Chef"
             },
             menu: [
                 {
@@ -214,12 +213,12 @@ const Home = ({ navigation }) => {
             photo: images.japanese_restaurant,
             duration: "10 - 15 min",
             location: {
-                latitude: -12.371345050190813,
-                longitude: 110.36381866919922,
+                latitude: -12.368828271241535, 
+                longitude: 130.87999863867643,
             },
             courier: {
                 avatar: images.avatar_4,
-                name: "Ahmad"
+                name: "Kenshi - Japanese Cuisine Chef"
             },
             menu: [
                 {
@@ -241,12 +240,12 @@ const Home = ({ navigation }) => {
             photo: images.noodle_shop,
             duration: "15 - 20 min",
             location: {
-                latitude: -12.371345050190813,
-                longitude: 110.36381866919922,
+                latitude: -12.38834027046509, 
+                longitude: 130.8709377248105,
             },
             courier: {
                 avatar: images.avatar_4,
-                name: "Muthu"
+                name: "Mahad - Indian Cuisine Chef"
             },
             menu: [
                 {
@@ -294,12 +293,12 @@ const Home = ({ navigation }) => {
             photo: images.kek_lapis,
             duration: "35 - 40 min",
             location: {
-                latitude: -12.371345050190813,
-                longitude: 110.36381866919922,
+                latitude: -12.370329136967252, 
+                longitude: 130.87423352469156,
             },
             courier: {
                 avatar: images.avatar_1,
-                name: "Jessie"
+                name: "Kenzie"
             },
             menu: [
                 {
@@ -335,13 +334,13 @@ const Home = ({ navigation }) => {
 
     const [categories, setCategories] = React.useState(categoryData)
     const [selectedCategory, setSelectedCategory] = React.useState(null)
-    const [restaurants, setRestaurants] = React.useState(restaurantData)
+    const [restaurants, setRestaurants] = React.useState(serviceData)
     const [currentLocation, setCurrentLocation] = React.useState(initialCurrentLocation)
 
 
     function onSelectCategory(category) {
         //filter restaurant
-        let restaurantList = restaurantData.filter(a => a.categories.includes(category.id))
+        let restaurantList = serviceData.filter(a => a.categories.includes(category.id))
 
         setRestaurants(restaurantList)
 
